@@ -3926,3 +3926,27 @@ Processing by PostsController#edit as HTML
   Rendering posts/edit.html.erb within layouts/application
   Rendered posts/_form.html.erb (3.7ms)
   Rendered posts/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 46ms (Views: 29.4ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/posts/17" for 24.15.97.75 at 2020-10-05 01:36:55 +0000
+Cannot render console from 24.15.97.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JrbGeV7ygZxA0E2PuKZVosrxwLI4YElIIfHPlsSUpou5OpK3VNv0akISjrmPY9o1xGWnuIaVu/xJJWyemuT/qw==", "post"=>{"author_id"=>"", "title"=>"J", "description"=>"j"}, "commit"=>"Update Post", "id"=>"17"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://67.205.188.72:38650/posts/17
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/17" for 24.15.97.75 at 2020-10-05 01:36:55 +0000
+Cannot render console from 24.15.97.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
