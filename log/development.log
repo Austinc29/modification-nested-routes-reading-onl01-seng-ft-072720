@@ -4024,3 +4024,26 @@ Processing by PostsController#edit as HTML
 Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.2ms)
 
 
+Started PATCH "/posts/18" for 24.15.97.75 at 2020-10-05 01:37:09 +0000
+Cannot render console from 24.15.97.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7Vd69X8UflDcnF3mRWu08zQJatx1TGDFxXiJVQG8rHZy2y47dT0Lpt5entByrjtkOp0N1su5knGtrCpdX8z1Vg==", "post"=>{"author_id"=>"4", "title"=>"j", "description"=>"j"}, "commit"=>"Update Post", "id"=>"18"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "J"], ["description", "j"], ["updated_at", "2020-10-05 01:37:09.560729"], ["id", 18]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://67.205.188.72:38650/posts/18
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/18" for 24.15.97.75 at 2020-10-05 01:37:09 +0000
+Cannot render console from 24.15.97.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.5ms)
+
+
